@@ -1,5 +1,4 @@
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class SalesApplicationService {
@@ -19,6 +18,7 @@ public class SalesApplicationService {
     }
 
     private static void bestWorstMonthSale(List<SalesDataByModel> modelDataInfo, String teslaModel) {
+        //Getting the best and worst sale SalesDataByModel object
         SalesDataByModel bestMonthSaleValue = modelDataInfo.stream().max(SalesDataByModel::compareTo).get();
         SalesDataByModel worstMonthSaleValue = modelDataInfo.stream().min(SalesDataByModel::compareTo).get();
         System.out.println("The "+ "best month" + " for Model "+ teslaModel + " was: " + bestMonthSaleValue.getYearMonth());

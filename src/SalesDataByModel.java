@@ -29,14 +29,7 @@ public class SalesDataByModel implements Comparable<SalesDataByModel> {
 
     @Override
     public int compareTo(SalesDataByModel that) {
-        	int value = 0;
-	if (this.saleValue > that.saleValue) {
-		value = 1;
-	}
-	else if (this.saleValue < that.saleValue) {
-		value = -1;
-	}
-	return value;
+        return this.saleValue.compareTo(that.saleValue);
 
     }
 }
